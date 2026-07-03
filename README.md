@@ -15,7 +15,7 @@ Simulación integral de una cadena de ataque de ingeniería social en un **entor
 - Lazaro Torres Sebastian — 20234645
 - Luna Carranza Dorian Sebastian — 20231682
 
-**Asesor:** Miguel Angel Valencia Amado
+**Profesor:** Miguel Angel Valencia Amado
 
 ---
 
@@ -35,10 +35,10 @@ El proyecto reproduce, de extremo a extremo, la cadena de ataque de un adversari
 .
 ├── README.md
 ├── .gitignore
-├── portal-clonado/
+├── login-ulima/
 │   ├── login-ulima.html      # Clon del login institucional (2 pantallas: login + código 2FA)
 │   └── server.js             # Servidor Node (puerto 3000), guarda en datos.json
-├── flask/
+├── reporte_server/
 │   └── reporte_server.py     # Endpoint /reporte/<dni> que entrega el agente (Caso de exfiltración)
 ├── correos/                  # Plantillas de correo usadas en Gophish
 │   ├── comunicado_rrhh.html  # Caso 1 (actualización obligatoria de credenciales)
@@ -47,9 +47,7 @@ El proyecto reproduce, de extremo a extremo, la cadena de ataque de un adversari
 │   └── correo_soporte_it.html# Caso Soporte IT (actualización de 2FA)
 ├── scripts/
 │   ├── enviar_video.py       # Envío del deepfake por la API de Telegram
-│   └── macro_excel.bas       # Macro VBA (exportada como texto)
-└── docs/
-    └── evidencias/           # Capturas y logs (opcional)
+    └── macro_excel.bas       # Macro VBA (exportada como texto)
 ```
 
 ## Requisitos
@@ -64,7 +62,7 @@ El proyecto reproduce, de extremo a extremo, la cadena de ataque de un adversari
 ### 1) Portal clonado (Node)
 
 ```
-cd portal-clonado
+cd login-ulima
 node server.js
 # Abrir en el navegador: http://localhost:3000
 ```
@@ -80,8 +78,8 @@ cloudflared tunnel --url http://localhost:3000
 ### 2) Servidor Flask (entrega del agente)
 
 ```
-cd flask
-python3 reporte_server.py
+cd reporte_server
+python3 server.py
 # Escucha en http://0.0.0.0:5000  (endpoint /reporte/<dni>)
 ```
 
@@ -98,7 +96,6 @@ Levantar dos terminales: una con el servidor (`node server.js`) y otra con el t�
 
 ## Datos y seguridad
 
-- No se versionan datos capturados (`datos.json`), logs (`*.log`) ni el archivo `.xlsm` armado (ver `.gitignore`).
 - Todas las identidades, credenciales y números telefónicos usados son **sintéticos**.
 - Se recomienda mantener el antivirus/EDR activo en entornos reales; en el laboratorio se desactivó temporalmente porque el agente nativo de Caldera tiene una firma conocida (esto mismo confirma el valor del control).
 
