@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div
+      style="
+        margin: 0;
+        padding: 0;
+        color: #000;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 14px;
+      "
+    >
+      <table
+        align="center"
+        border="0"
+        cellpadding="1"
+        cellspacing="0"
+        width="600"
+      >
+        <tbody>
+          <tr>
+            <td
+              style="
+                color: #333;
+                font-family: Verdana;
+                font-size: 10px !important;
+                text-align: center;
+                text-decoration: none;
+                padding: 5px 10px 10px 10px !important;
+                background: #fff;
+              "
+            >
+              <div align="center">
+                Si no visualizas bien este mensaje, clic
+                <a href="{{.URL}}" target="_blank">aqu&iacute;</a>.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" bgcolor="#666666" valign="top" width="26">
+              <table
+                align="center"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                width="600"
+              >
+                <tbody>
+                  <tr>
+                    <td align="center" bgcolor="#ffffff" valign="top">
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="500"
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              align="center"
+                              style="padding: 20px 20px 20px 20px"
+                            >
+                              <img
+                                alt="LOGO"
+                                height="169"
+                                width="171"
+                                src="https://contenidos.ulima.edu.pe/imagenes/mb/LOGO-170.png"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              align="center"
+                              style="
+                                font-family: Verdana, Geneva, sans-serif;
+                                font-size: 17px;
+                                color: black;
+                                padding: 10px 10px 30px 10px;
+                                text-align: center;
+                                line-height: 28px;
+                              "
+                            >
+                              <strong>NOTIFICACI&Oacute;N DE SEGURIDAD</strong
+                              ><br />
+                              <strong
+                                >Revalidaci&oacute;n de Autenticaci&oacute;n en
+                                Dos Factores</strong
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              align="center"
+                              style="
+                                font-family: Verdana, Geneva, sans-serif;
+                                font-size: 14px;
+                                color: black;
+                                padding: 10px 10px 10px 10px;
+                                text-align: justify;
+                                line-height: 28px;
+                              "
+                            >
+                              <p>
+                                <br />
+                                Estimado(a) {{.FirstName}}:<br />
+                                <br />
+                                Como parte de las mejoras continuas en los
+                                protocolos de seguridad del portal
+                                institucional, se ha detectado que los tokens de
+                                autenticaci&oacute;n en dos factores (Google
+                                Authenticator) vinculados a su cuenta requieren
+                                una revalidaci&oacute;n antes de que expire su
+                                vigencia actual.<br />
+                                <br />
+                                Este proceso es obligatorio para todo el
+                                personal y alumnado con doble factor de
+                                autenticaci&oacute;n activo. Si no se completa
+                                dentro del plazo establecido, el acceso a los
+                                servicios institucionales podr&iacute;a verse
+                                restringido.<br />
+                                <br />
+                                Para realizar la sincronizaci&oacute;n de manera
+                                segura, por favor ingrese al portal de
+                                autenticaci&oacute;n haciendo clic
+                                <a
+                                  href="{{.URL}}"
+                                  style="
+                                    color: #0067b8;
+                                    font-weight: bold;
+                                    text-decoration: underline;
+                                  "
+                                  target="_blank"
+                                  >en este enlace</a
+                                >.<br />
+                                <br />
+                                Plazo: 48 horas desde la recepci&oacute;n de
+                                este correo<br />
+                                Referencia: IT-{{.RId}}<br />
+                                <br />
+                                Agradecemos su pronta gesti&oacute;n y su
+                                continuo compromiso con la seguridad de nuestra
+                                instituci&oacute;n.
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              align="left"
+                              style="
+                                font-family: Verdana, Geneva, sans-serif;
+                                font-size: 14px;
+                                color: #000000;
+                                padding: 0px 0px 40px 10px;
+                                text-align: left;
+                                line-height: 28px;
+                              "
+                            >
+                              <br />
+                              <strong>Universidad de Lima</strong><br />
+                              &Aacute;rea de Soporte IT
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="20px">&nbsp;</td>
+          </tr>
+          <tr>
+            <td
+              align="left"
+              height="50"
+              style="
+                font-size: 10px;
+                color: #666666;
+                font-family: verdana;
+                text-decoration: none;
+                line-height: 12px;
+              "
+              width="596"
+            >
+              <div align="center">
+                Este es un mensaje generado autom&aacute;ticamente por el
+                sistema de seguridad institucional. Por favor no responda
+                directamente a este correo.<br /><br /><b
+                  >&copy; 2026 Derechos reservados</b
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    {{.Tracker}}
+  </body>
+</html>
