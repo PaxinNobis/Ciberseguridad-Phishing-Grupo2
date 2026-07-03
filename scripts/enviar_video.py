@@ -6,8 +6,8 @@ from telethon.tl.functions.contacts import ImportContactsRequest
 from telethon.tl.types import InputPhoneContact
 
 # --- Credenciales ---
-API_ID = 37253840
-API_HASH = "d2dcaf3780710bf8bdca36afb27d460c"
+API_ID = "Ingresar API"
+API_HASH = "Ingresar API Hash"
 SESSION_NAME = "sesion"
 
 async def main():
